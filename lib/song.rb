@@ -50,14 +50,14 @@ def self.alphabetical
 def self.new_from_filename(filename)
 song = self.new
 song.name = filename.split(" - ")[1].chomp(".mp3")
-artist_name = filename.split(" - ")[0]
+song.artist_name = filename.split(" - ")[0]
 song
 end
 
 def self.create_from_filename(filename)
   song = self.new
   song.name = filename.split(" - ")[1].chomp(".mp3")
-  artist_name = filename.split(" - ")[0]
+  song.artist_name = filename.split(" - ")[0]
   @@all<<song
 end
 
